@@ -1,0 +1,10 @@
+﻿global using NVTemplate.Core.Configuration;
+global using NVTemplate.Core.Framework.Continuation;
+global using NVTemplate.Core.Framework.Exceptions;
+global using NVTemplate.Core.Framework.Json;
+global using NVTemplate.Core.General;
+global using NVTemplate.Web.Framework.Middlewares;
+global using NVTemplate.Web.Framework.Models;
+global using NVTemplate.Web.Framework.OpenApi;
+global using NVTemplate.Web.Framework.Telemetry;
+global using NVTemplate.Web.RestApi;

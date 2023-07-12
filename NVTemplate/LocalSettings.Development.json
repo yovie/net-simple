@@ -1,0 +1,37 @@
+{
+  "JwtBearer": {
+    "Audience": "",
+    "Authority": ""
+  },
+  "OpenApiSecurityScheme": {
+    "Type": "OAuth2",
+    "Flow": "Implicit",
+    "Flows": {
+      "Implicit": {
+        "AuthorizationUrl": "https://localhost/"
+      }
+    }
+  },
+  "OAuth2ClientSettings": {
+    "AppName": "Name",
+    "ClientId": "client-id"
+  },
+  "AllowedHosts": "*",
+  "RequestTracingMiddleware": {
+    "EnableFor": [
+      "/api/.*"
+    ]
+  },
+  "Logging": {
+    "LogLevel": {
+      "AspNetCoreRequestTracing.RequestTracingMiddleware": "Trace",
+      "System.Net.Http.HttpClient": "Trace",
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "Backend": {
+    "EnableSwagger": true
+  }
+}
