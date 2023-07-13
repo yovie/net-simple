@@ -1,0 +1,19 @@
+{
+  "name": "backend-app-swagger",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "targets": {
+    "build": {
+      "executor": "nx:noop",
+      "outputs": ["libs/generated/backend-app-swagger"]
+    },
+    "codegen": {
+      "executor": "@nx-dotnet/core:openapi-codegen",
+      "options": {
+        "openapiJsonPath": "libs/generated/backend-app-swagger/swagger.json",
+        "outputProject": "generated-backend-app-types"
+      },
+      "dependsOn": ["^swagger"]
+    }
+  },
+  "implicitDependencies": ["backend-app"]
+}

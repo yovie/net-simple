@@ -14,6 +14,26 @@ https://www.nuget.org/package
 ## mssql server
 `docker run --name mssql-server -e ACCEPT_EULA="Y" -e MSSQL_SA_PASSWORD="TheStrong\(\!\)Password1" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest`
 
+## command
+```
+dotnet list packages
+dotnet tool list
+```
+
+## nx
+```
+npm install --global nx@latest  // we got nx command
+
+npm create nx-workspace // minimum with ts/js config
+// enter the workspace
+npm install --save-dev @nx-dotnet/core
+nx g @nx-dotnet/core:app satu-app
+
+nx build satu-app
+nx serve satu-app
+// one workspace can be multiple application (backend service / frontend)
+```
+
 ## simple
 ```
 dotnet new sln -n Test-Backend

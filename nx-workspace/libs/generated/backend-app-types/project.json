@@ -1,0 +1,41 @@
+{
+  "name": "generated-backend-app-types",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/generated/backend-app-types/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/generated/backend-app-types",
+        "main": "libs/generated/backend-app-types/src/index.ts",
+        "tsConfig": "libs/generated/backend-app-types/tsconfig.lib.json",
+        "assets": ["libs/generated/backend-app-types/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/generated/backend-app-types/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/generated/backend-app-types/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["backend-app-swagger"]
+}
