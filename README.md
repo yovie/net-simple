@@ -87,3 +87,6 @@ dotnet build
 
 ## backend
 `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`
+
+## jwt
+`dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version 6.0.20`
