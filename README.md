@@ -83,6 +83,7 @@ dotnet add package NSwag.Core --version 13.19.0
 
 // do, on each project
 dotnet build
+dotnet run --project NVTemplate.Web
 ```
 
 ## backend
